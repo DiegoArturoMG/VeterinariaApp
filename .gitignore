@@ -11,7 +11,7 @@
 /node_modules
 
 # README
-README_Install
+README_Install.md
 
 # profiling files
 chrome-profiler-events*.json
