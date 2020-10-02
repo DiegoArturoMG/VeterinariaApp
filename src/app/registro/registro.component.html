@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>Registro de Mascota</h1>
+  <hr />
+  <div class="p-grid" style="margin-bottom: 1.2%">
+    <div class="p-col">
+      <label for="mascota_nombre">Nombre</label>
+      <input
+        id="mascota_nombre"
+        type="text"
+        style="width: 100%"
+        pInputText
+        [(ngModel)]="mascota_nombre"
+      />
+    </div>
+    <div class="p-col">
+      <label for="mascota_raza">Raza</label>
+      <input
+        type="text"
+        style="width: 100%"
+        pInputText
+        [(ngModel)]="mascota_raza"
+      />
+    </div>
+    <div class="p-col">
+      <label for="mascota_edad">Fecha de Nacimiento</label>
+      <p-calendar
+        [(ngModel)]="mascota_edad"
+        showButtonBar="true"
+        [style]="{ width: '100%' }"
+        [inputStyle]="{ width: '100%' }"
+        [showIcon]="true"
+        [locale]="es"
+        [monthNavigator]="true"
+        [yearNavigator]="true"
+        yearRange="2000:2030"
+      ></p-calendar>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-1 p-offset-5" style="text-align: center">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Limpiar"
+        class="p-button-outlined p-button-danger"
+      ></button>
+    </div>
+    <div class="p-col-1" style="text-align: center">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Registrar"
+        class="p-button-outlined p-button-success"
+      ></button>
+    </div>
+  </div>
+</div>

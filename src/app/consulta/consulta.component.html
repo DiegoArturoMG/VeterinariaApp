@@ -1,0 +1,126 @@
+<div class="container">
+  <h1>Consulta</h1>
+  <hr />
+  <div class="container">
+    <div class="p-grid">
+      <p>Consulta por Mascota</p>
+    </div>
+    <div class="p-grid" style="margin-bottom: -1.5%">
+      <div class="p-col-3"><label for="mascota_id">ID</label></div>
+      <div class="p-col-3"><label for="mascota_nombre">Nombre</label></div>
+      <div class="p-col-3"><label for="mascota_raza">Raza</label></div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col-3">
+        <input
+          id="mascota_id"
+          type="text"
+          style="width: 100%"
+          pInputText
+          [(ngModel)]="mascota_id"
+        />
+      </div>
+      <div class="p-col-3">
+        <input
+          id="mascota_nombre"
+          type="text"
+          style="width: 100%"
+          pInputText
+          [(ngModel)]="mascota_nombre"
+        />
+      </div>
+      <div class="p-col-3">
+        <p-dropdown
+          [options]="razas"
+          [(ngModel)]="mascota_raza"
+          [style]="{ width: '100%' }"
+          optionLabel="name"
+          placeholder="Seleccione una raza"
+          [showClear]="true"
+        ></p-dropdown>
+      </div>
+      <div class="p-col-2">
+        <button
+          pButton
+          pRipple
+          style="width: 100%"
+          type="button"
+          label="Buscar"
+          class="p-button-outlined p-button-success"
+        ></button>
+      </div>
+      <div class="p-col-1">
+        <button
+          pButton
+          pRipple
+          style="width: 100%"
+          type="button"
+          icon="pi pi-trash"
+          class="p-button-outlined p-button-secondary"
+        ></button>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="p-grid">
+      <p>Consulta por Usuario</p>
+    </div>
+    <div class="p-grid" style="margin-bottom: -1.5%">
+      <div class="p-col-3"><label for="mascota_id">ID</label></div>
+      <div class="p-col-3"><label for="mascota_nombre">Nombre</label></div>
+      <div class="p-col-3"><label for="mascota_raza">CP</label></div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col-3">
+        <input
+          id="mascota_id"
+          type="text"
+          style="width: 100%"
+          pInputText
+          [(ngModel)]="mascota_id"
+        />
+      </div>
+      <div class="p-col-3">
+        <input
+          id="mascota_nombre"
+          type="text"
+          style="width: 100%"
+          pInputText
+          [(ngModel)]="mascota_nombre"
+        />
+      </div>
+      <div class="p-col-3">
+        <input
+          id="mascota_nombre"
+          type="text"
+          style="width: 100%"
+          pInputText
+          [(ngModel)]="mascota_nombre"
+        />
+      </div>
+      <div class="p-col-2">
+        <button
+          pButton
+          pRipple
+          style="width: 100%"
+          type="button"
+          label="Buscar"
+          class="p-button-outlined p-button-success"
+        ></button>
+      </div>
+      <div class="p-col-1">
+        <button
+          pButton
+          pRipple
+          style="width: 100%"
+          type="button"
+          icon="pi pi-trash"
+          class="p-button-outlined p-button-secondary"
+        ></button>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <app-consulta-tabla></app-consulta-tabla>
+</div>

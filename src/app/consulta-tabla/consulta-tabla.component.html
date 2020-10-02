@@ -1,0 +1,18 @@
+<p-table [value]="mascotasList">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-mascota>
+    <tr>
+      <td>{{ mascota.code }}</td>
+      <td>{{ mascota.name }}</td>
+      <td>{{ mascota.category }}</td>
+      <td>{{ mascota.quantity }}</td>
+    </tr>
+  </ng-template>
+</p-table>
