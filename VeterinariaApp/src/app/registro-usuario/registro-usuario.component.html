@@ -3,37 +3,32 @@
   <hr />
   <div class="p-grid" style="margin-bottom: 1.2%">
     <div class="p-col">
-      <label for="mascota_nombre">Nombre</label>
+      <label for="usuario_nombre">Nombre(s)</label>
       <input
-        id="mascota_nombre"
+        id="usuario_nombre"
         type="text"
         style="width: 100%"
         pInputText
-        [(ngModel)]="mascota_nombre"
+        [(ngModel)]="usuario_nombre"
       />
     </div>
     <div class="p-col">
-      <label for="mascota_raza">Raza</label>
+      <label for="usuario_apPaterno">Apellido Paterno</label>
       <input
         type="text"
         style="width: 100%"
         pInputText
-        [(ngModel)]="mascota_raza"
+        [(ngModel)]="usuario_apPaterno"
       />
     </div>
     <div class="p-col">
-      <label for="mascota_edad">Fecha de Nacimiento</label>
-      <p-calendar
-        [(ngModel)]="mascota_edad"
-        showButtonBar="true"
-        [style]="{ width: '100%' }"
-        [inputStyle]="{ width: '100%' }"
-        [showIcon]="true"
-        [locale]="es"
-        [monthNavigator]="true"
-        [yearNavigator]="true"
-        yearRange="2000:2030"
-      ></p-calendar>
+      <label for="usuario_apMaterno">Apellido Materno</label>
+      <input
+        type="text"
+        style="width: 100%"
+        pInputText
+        [(ngModel)]="usuario_apMaterno"
+      />
     </div>
   </div>
   <div class="p-grid">
@@ -43,7 +38,7 @@
         pRipple
         type="button"
         label="Limpiar"
-        class="p-button-outlined p-button-danger"
+        class="p-button-outlined p-button-secondary"
       ></button>
     </div>
     <div class="p-col-1" style="text-align: center">

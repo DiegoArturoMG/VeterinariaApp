@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConexionService } from '../services/conexion.service';
 
 @Component({
   selector: 'app-registro-usuario',
@@ -6,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro-usuario.component.css'],
 })
 export class RegistroUsuarioComponent implements OnInit {
-  mascota_nombre: any;
-  mascota_raza: any;
-  mascota_edad: Date;
+  usuario_nombre: string;
+  usuario_apPaterno: string;
+  usuario_apMaterno: string;
   es: any;
 
-  constructor() {}
+  constructor(public conexion: ConexionService) {}
 
   ngOnInit() {
     this.es = {
@@ -60,5 +61,14 @@ export class RegistroUsuarioComponent implements OnInit {
       dateFormat: 'dd/mm/yy',
       weekHeader: 'Wk',
     };
+  }
+
+  saveUser() {
+    let user = {
+      usuario_nombre: this.usuario_nombre,
+      usuario_apPaterno: this.usuario_apPaterno,
+      usuario_apMaterno: this.usuario_apMaterno,
+    };
+    this.conexion.saveUser(user);
   }
 }
